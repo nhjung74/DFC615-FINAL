@@ -1,0 +1,113 @@
+/content/gdrive/MyDrive/Colab Notebooks/DFC615/bert-base-multilingual-cased_128_32_3e-05_2
+/content/gdrive/MyDrive/Colab Notebooks/DFC615/bert-base-multilingual-cased_128_32_3e-05_2
+WARNING - You've set a doc stride which may be superior to the document length in some examples. This could result in errors when building features from the examples. Please reduce the doc stride or increase the maximum length to ensure the features are correctly built.
+Some weights of the model checkpoint at bert-base-multilingual-cased were not used when initializing BertForQuestionAnswering: ['cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.LayerNorm.bias']
+- This IS expected if you are initializing BertForQuestionAnswering from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPretraining model).
+- This IS NOT expected if you are initializing BertForQuestionAnswering from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertForQuestionAnswering were not initialized from the model checkpoint at bert-base-multilingual-cased and are newly initialized: ['qa_outputs.weight', 'qa_outputs.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+06/19/2021 09:30:10 - INFO - __main__ -   Training/evaluation parameters AttrDict({'task': 'korquad', 'data_dir': '/content/gdrive/MyDrive/Colab Notebooks/DFC615/bert-base-multilingual-cased_128_32_3e-05_2', 'ckpt_dir': 'ckpt', 'train_file': 'KorQuAD_v1.0_train.json', 'predict_file': 'KorQuAD_v1.0_dev.json', 'threads': 4, 'version_2_with_negative': False, 'null_score_diff_threshold': 0.0, 'max_seq_length': 128, 'doc_stride': 128, 'max_query_length': 64, 'max_answer_length': 30, 'n_best_size': 20, 'verbose_logging': True, 'overwrite_output_dir': True, 'evaluate_during_training': True, 'eval_all_checkpoints': True, 'save_optimizer': False, 'do_lower_case': False, 'do_train': True, 'do_eval': True, 'num_train_epochs': 2, 'weight_decay': 0.0, 'gradient_accumulation_steps': 1, 'adam_epsilon': 1e-08, 'warmup_proportion': 0, 'max_steps': -1, 'max_grad_norm': 1.0, 'no_cuda': False, 'model_type': 'bert-base-multilingual-cased', 'model_name_or_path': 'bert-base-multilingual-cased', 'output_dir': '/content/gdrive/MyDrive/Colab Notebooks/DFC615/bert-base-multilingual-cased_128_32_3e-05_2/output', 'seed': 42, 'train_batch_size': 32, 'eval_batch_size': 64, 'logging_steps': 3000, 'save_steps': 3000, 'learning_rate': 3e-05, 'device': 'cuda'})
+06/19/2021 09:30:10 - INFO - __main__ -   Creating features from dataset file at /content/gdrive/MyDrive/Colab Notebooks/DFC615/bert-base-multilingual-cased_128_32_3e-05_2
+100%|██████████| 1420/1420 [00:19<00:00, 74.25it/s]
+convert squad examples to features: 100%|██████████| 60407/60407 [05:56<00:00, 169.46it/s]
+add example index and unique id: 100%|██████████| 60407/60407 [00:00<00:00, 380247.99it/s]
+06/19/2021 09:36:31 - INFO - __main__ -   Saving features into cached file /content/gdrive/MyDrive/Colab Notebooks/DFC615/bert-base-multilingual-cased_128_32_3e-05_2/cached_train_bert-base-multilingual-cased_128
+06/19/2021 09:38:06 - INFO - __main__ -   ***** Running training *****
+06/19/2021 09:38:06 - INFO - __main__ -     Num examples = 175486
+06/19/2021 09:38:06 - INFO - __main__ -     Num Epochs = 2
+06/19/2021 09:38:06 - INFO - __main__ -     Train batch size per GPU = 32
+06/19/2021 09:38:06 - INFO - __main__ -     Total train batch size (w. parallel, distributed & accumulation) = 32
+06/19/2021 09:38:06 - INFO - __main__ -     Gradient Accumulation steps = 1
+06/19/2021 09:38:06 - INFO - __main__ -     Total optimization steps = 10968
+Epoch 1 done
+Epoch 2 done
+
+06/19/2021 09:58:08 - INFO - __main__ -   Creating features from dataset file at /content/gdrive/MyDrive/Colab Notebooks/DFC615/bert-base-multilingual-cased_128_32_3e-05_2
+100%|██████████| 140/140 [00:01<00:00, 78.13it/s]
+convert squad examples to features: 100%|██████████| 5774/5774 [00:35<00:00, 164.59it/s]
+add example index and unique id: 100%|██████████| 5774/5774 [00:00<00:00, 322901.18it/s]
+06/19/2021 09:58:46 - INFO - __main__ -   Saving features into cached file /content/gdrive/MyDrive/Colab Notebooks/DFC615/bert-base-multilingual-cased_128_32_3e-05_2/cached_dev_bert-base-multilingual-cased_128
+06/19/2021 09:58:55 - INFO - __main__ -   ***** Running evaluation 3000 *****
+06/19/2021 09:58:55 - INFO - __main__ -     Num examples = 17413
+06/19/2021 09:58:55 - INFO - __main__ -     Batch size = 64
+
+ 100.00% [273/273 01:08<00:00]
+06/19/2021 10:00:03 - INFO - __main__ -     Evaluation done in total 68.122420 secs (0.003912 sec per example)
+/usr/local/lib/python3.7/dist-packages/konlpy/tag/_okt.py:16: UserWarning: "Twitter" has changed to "Okt" since KoNLPy v0.4.5.
+  warn('"Twitter" has changed to "Okt" since KoNLPy v0.4.5.')
+06/19/2021 10:00:45 - INFO - __main__ -     HasAns_exact = 59.040526498094906
+06/19/2021 10:00:45 - INFO - __main__ -     HasAns_f1 = 65.96321759293686
+06/19/2021 10:00:45 - INFO - __main__ -     HasAns_total = 5774
+06/19/2021 10:00:45 - INFO - __main__ -     best_exact = 59.040526498094906
+06/19/2021 10:00:45 - INFO - __main__ -     best_exact_thresh = 0.0
+06/19/2021 10:00:45 - INFO - __main__ -     best_f1 = 65.96321759293686
+06/19/2021 10:00:45 - INFO - __main__ -     best_f1_thresh = 0.0
+06/19/2021 10:00:45 - INFO - __main__ -     exact = 59.040526498094906
+06/19/2021 10:00:45 - INFO - __main__ -     f1 = 65.96321759293686
+06/19/2021 10:00:45 - INFO - __main__ -     official_exact_match = 69.51853134741947
+06/19/2021 10:00:45 - INFO - __main__ -     official_f1 = 79.89969281909687
+06/19/2021 10:00:45 - INFO - __main__ -     total = 5774
+06/19/2021 10:00:48 - INFO - __main__ -   Saving model checkpoint to /content/gdrive/MyDrive/Colab Notebooks/DFC615/bert-base-multilingual-cased_128_32_3e-05_2/output/checkpoint-3000
+06/19/2021 10:20:49 - INFO - __main__ -   Loading features from cached file /content/gdrive/MyDrive/Colab Notebooks/DFC615/bert-base-multilingual-cased_128_32_3e-05_2/cached_dev_bert-base-multilingual-cased_128
+06/19/2021 10:20:55 - INFO - __main__ -   ***** Running evaluation 6000 *****
+06/19/2021 10:20:55 - INFO - __main__ -     Num examples = 17413
+06/19/2021 10:20:55 - INFO - __main__ -     Batch size = 64
+
+ 100.00% [273/273 01:07<00:00]
+06/19/2021 10:22:03 - INFO - __main__ -     Evaluation done in total 67.957327 secs (0.003903 sec per example)
+06/19/2021 10:22:52 - INFO - __main__ -     HasAns_exact = 59.490820921371665
+06/19/2021 10:22:52 - INFO - __main__ -     HasAns_f1 = 66.14605153919308
+06/19/2021 10:22:52 - INFO - __main__ -     HasAns_total = 5774
+06/19/2021 10:22:52 - INFO - __main__ -     best_exact = 59.490820921371665
+06/19/2021 10:22:52 - INFO - __main__ -     best_exact_thresh = 0.0
+06/19/2021 10:22:52 - INFO - __main__ -     best_f1 = 66.14605153919308
+06/19/2021 10:22:52 - INFO - __main__ -     best_f1_thresh = 0.0
+06/19/2021 10:22:52 - INFO - __main__ -     exact = 59.490820921371665
+06/19/2021 10:22:52 - INFO - __main__ -     f1 = 66.14605153919308
+06/19/2021 10:22:52 - INFO - __main__ -     official_exact_match = 69.96882577069623
+06/19/2021 10:22:52 - INFO - __main__ -     official_f1 = 80.34233435263822
+06/19/2021 10:22:52 - INFO - __main__ -     total = 5774
+06/19/2021 10:22:55 - INFO - __main__ -   Saving model checkpoint to /content/gdrive/MyDrive/Colab Notebooks/DFC615/bert-base-multilingual-cased_128_32_3e-05_2/output/checkpoint-6000
+06/19/2021 10:42:56 - INFO - __main__ -   Loading features from cached file /content/gdrive/MyDrive/Colab Notebooks/DFC615/bert-base-multilingual-cased_128_32_3e-05_2/cached_dev_bert-base-multilingual-cased_128
+06/19/2021 10:43:02 - INFO - __main__ -   ***** Running evaluation 9000 *****
+06/19/2021 10:43:02 - INFO - __main__ -     Num examples = 17413
+06/19/2021 10:43:02 - INFO - __main__ -     Batch size = 64
+
+ 100.00% [273/273 01:07<00:00]
+06/19/2021 10:44:10 - INFO - __main__ -     Evaluation done in total 67.969981 secs (0.003903 sec per example)
+06/19/2021 10:44:59 - INFO - __main__ -     HasAns_exact = 60.21821960512643
+06/19/2021 10:44:59 - INFO - __main__ -     HasAns_f1 = 67.1785708614595
+06/19/2021 10:44:59 - INFO - __main__ -     HasAns_total = 5774
+06/19/2021 10:44:59 - INFO - __main__ -     best_exact = 60.21821960512643
+06/19/2021 10:44:59 - INFO - __main__ -     best_exact_thresh = 0.0
+06/19/2021 10:44:59 - INFO - __main__ -     best_f1 = 67.1785708614595
+06/19/2021 10:44:59 - INFO - __main__ -     best_f1_thresh = 0.0
+06/19/2021 10:44:59 - INFO - __main__ -     exact = 60.21821960512643
+06/19/2021 10:44:59 - INFO - __main__ -     f1 = 67.1785708614595
+06/19/2021 10:44:59 - INFO - __main__ -     official_exact_match = 70.93869068236924
+06/19/2021 10:44:59 - INFO - __main__ -     official_f1 = 81.25478746055614
+06/19/2021 10:44:59 - INFO - __main__ -     total = 5774
+06/19/2021 10:45:02 - INFO - __main__ -   Saving model checkpoint to /content/gdrive/MyDrive/Colab Notebooks/DFC615/bert-base-multilingual-cased_128_32_3e-05_2/output/checkpoint-9000
+06/19/2021 10:58:10 - INFO - __main__ -    global_step = 10969, average loss = 0.2842477009081
+06/19/2021 10:58:10 - INFO - __main__ -   Evaluate the following checkpoints: ['/content/gdrive/MyDrive/Colab Notebooks/DFC615/bert-base-multilingual-cased_128_32_3e-05_2/output/checkpoint-3000', '/content/gdrive/MyDrive/Colab Notebooks/DFC615/bert-base-multilingual-cased_128_32_3e-05_2/output/checkpoint-6000', '/content/gdrive/MyDrive/Colab Notebooks/DFC615/bert-base-multilingual-cased_128_32_3e-05_2/output/checkpoint-9000']
+06/19/2021 10:58:18 - INFO - __main__ -   Loading features from cached file /content/gdrive/MyDrive/Colab Notebooks/DFC615/bert-base-multilingual-cased_128_32_3e-05_2/cached_dev_bert-base-multilingual-cased_128
+06/19/2021 10:58:23 - INFO - __main__ -   ***** Running evaluation 3000 *****
+06/19/2021 10:58:23 - INFO - __main__ -     Num examples = 17413
+06/19/2021 10:58:23 - INFO - __main__ -     Batch size = 64
+
+ 100.00% [273/273 01:07<00:00]
+06/19/2021 10:59:31 - INFO - __main__ -     Evaluation done in total 67.931272 secs (0.003901 sec per example)
+06/19/2021 11:00:27 - INFO - __main__ -   Loading features from cached file /content/gdrive/MyDrive/Colab Notebooks/DFC615/bert-base-multilingual-cased_128_32_3e-05_2/cached_dev_bert-base-multilingual-cased_128
+06/19/2021 11:00:32 - INFO - __main__ -   ***** Running evaluation 6000 *****
+06/19/2021 11:00:32 - INFO - __main__ -     Num examples = 17413
+06/19/2021 11:00:32 - INFO - __main__ -     Batch size = 64
+
+ 100.00% [273/273 01:07<00:00]
+06/19/2021 11:01:40 - INFO - __main__ -     Evaluation done in total 67.919683 secs (0.003901 sec per example)
+06/19/2021 11:02:35 - INFO - __main__ -   Loading features from cached file /content/gdrive/MyDrive/Colab Notebooks/DFC615/bert-base-multilingual-cased_128_32_3e-05_2/cached_dev_bert-base-multilingual-cased_128
+06/19/2021 11:02:40 - INFO - __main__ -   ***** Running evaluation 9000 *****
+06/19/2021 11:02:40 - INFO - __main__ -     Num examples = 17413
+06/19/2021 11:02:40 - INFO - __main__ -     Batch size = 64
+
+ 100.00% [273/273 01:07<00:00]
+06/19/2021 11:03:48 - INFO - __main__ -     Evaluation done in total 67.875041 secs (0.003898 sec per example)
