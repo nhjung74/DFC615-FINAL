@@ -6,5 +6,5 @@
 학번 : 2020517002
 
 
- koELECTRA 모델코드<a href="https://github.com/nhjung74/DFC615_FINAL/blob/main/source/DFC615_FiNAL_JUNGNAKHYUN_2020517002_koELECTRA_small_128_512_15.ipynb">
+  * MRC Project 소스 <a href="https://github.com/nhjung74/DFC615-FINAL/blob/main/NLP_MRC_JNH_2020517002_FINAL_PROJECT_v1.ipynb">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
