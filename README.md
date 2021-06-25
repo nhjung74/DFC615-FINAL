@@ -5,7 +5,7 @@
 
 학번 : 2020517002
 
-   * 리더보드제출 답변  <a href="https://github.com/nhjung74/DFC615-FINAL/blob/main/my_answer_koelectra-small-v3_10.csv">my_answer_koelectra-small-v3_10.cs
+   * 리더보드제출 답변  <a href="https://github.com/nhjung74/DFC615-FINAL/blob/main/my_answer_koelectra-small-v3_10.csv">my_answer_koelectra-small-v3_10.csv
     
    * <a href="https://www.kaggle.com/c/dfc61500"> 캐글리더보드 https://www.kaggle.com/c/dfc61500
     
