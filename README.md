@@ -8,10 +8,13 @@
    * 리더보드제출 답변  <a href="https://github.com/nhjung74/DFC615-FINAL/blob/main/my_answer_koelectra-small-v3_10.csv">my_answer_koelectra-small-v3_10.csv
     
    * <a href="https://www.kaggle.com/c/dfc61500"> 캐글리더보드 https://www.kaggle.com/c/dfc61500
-    
+  
+  
    * MRC Project 소스 
+  
   <a href="https://github.com/nhjung74/DFC615-FINAL/blob/main/NLP_MRC_JNH_2020517002_FINAL_PROJECT_v1.ipynb">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/> NLP_MRC_JNH_2020517002_FINAL_PROJECT_v1.ipynb
+    
   <a href="https://github.com/nhjung74/DFC615-FINAL/blob/main/NLP_MRC_JNH_2020517002_FINAL_PROJECT_v2.ipynb">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/> NLP_MRC_JNH_2020517002_FINAL_PROJECT_v2.ipynb
 
